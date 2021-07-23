@@ -21,7 +21,6 @@
     "npm": ">=6.13"
   },
   "scripts": {
-    "prepare": "bower install",
     "check-env": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json",
     "shipit": "npm run-script -s check-env && bower install && bower update && grunt prepare-release",
     "lint": "grunt lint",
