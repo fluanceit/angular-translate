@@ -2096,6 +2096,8 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
             translations(languageKey, data.table);
             //track that we updated this language
             updatedLanguages[languageKey] = true;
+            // LB: FLU-2537 clear langPromises[languageKey]
+            langPromises[languageKey] = undefined;
           },
           //handle rejection to appease the $q validation
           angular.noop);
